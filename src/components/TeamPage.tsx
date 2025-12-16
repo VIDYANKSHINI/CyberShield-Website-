@@ -2,6 +2,29 @@ import { Github, Linkedin, Mail, Users } from "lucide-react";
 import { motion } from "motion/react";
 
 export function TeamPage() {
+  const coordinators = [
+    {
+      name: "Dr. Prashant Wakhare",
+      role: "Teacher Coordinator",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+      bio: "Providing strategic direction and academic support, ensuring alignment with institutional goals and educational standards.",
+      socials: [
+        { icon: Linkedin, href: "#", label: "LinkedIn" },
+        { icon: Mail, href: "mailto:prashant.wakhare@aissms.edu", label: "Email" }
+      ]
+    },
+    {
+      name: "Mr. Pavan M. Jadhav",
+      role: "Student Coordinator",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      bio: "Guiding and mentoring students in their cybersecurity journey, fostering leadership and academic excellence.",
+      socials: [
+        { icon: Linkedin, href: "#", label: "LinkedIn" },
+        { icon: Mail, href: "mailto:pavan.jadhav@aissms.edu", label: "Email" }
+      ]
+    }
+  ];
+
   const coreTeam = [
     {
       name: "Sanjana Godse",
@@ -211,6 +234,68 @@ export function TeamPage() {
             Passionate students dedicated to building a strong cybersecurity community and pushing the boundaries of what's possible.
           </p>
         </motion.div>
+
+        {/* Coordinators */}
+        <section className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-10"
+          >
+            <h2 className="text-3xl font-bold mb-2">Coordinators</h2>
+            <p className="text-gray-400">The leaders guiding CyberShield's mission and vision</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {coordinators.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group relative rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-[#00ff88]/50 transition-all overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <div className="relative">
+                  {/* Empty Profile Placeholder */}
+                  <div className="flex items-center justify-center p-8">
+                    <div className="w-32 h-32 rounded-full bg-gradient-to-br from-white/10 to-white/5 border border-white/20 flex items-center justify-center group-hover:border-[#00ff88]/50 transition-all">
+                      <Users className="h-16 w-16 text-gray-500" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 pt-0">
+                    <h3 className="text-xl font-semibold mb-1 text-white text-center">{member.name}</h3>
+                    <p className="text-sm text-[#06b6d4] mb-4 text-center">{member.role}</p>
+                    <p className="text-gray-400 text-sm mb-6 leading-relaxed text-center">{member.bio}</p>
+
+                    {/* Socials */}
+                    <div className="flex gap-2 justify-center">
+                      {member.socials.map((social) => {
+                        const Icon = social.icon;
+                        return (
+                          <a
+                            key={social.label}
+                            href={social.href}
+                            aria-label={social.label}
+                            className="p-2 rounded-lg bg-white/5 border border-white/10 hover:border-[#00ff88] hover:bg-[#00ff88]/10 transition-all group/icon"
+                          >
+                            <Icon className="h-4 w-4 text-gray-400 group-hover/icon:text-[#00ff88] transition-colors" />
+                          </a>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
 
         {/* Core Team */}
         <section className="mb-20">
