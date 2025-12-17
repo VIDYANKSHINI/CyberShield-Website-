@@ -18,7 +18,7 @@ export function EventsPage() {
       date: "January 20, 2025",
       time: "6:00 PM - 8:00 PM",
       mode: "Offline",
-      location: "AIDS Lab 2",
+      location: "AIDS Lab ",
       description: "Hands-on introduction to web security basics, covering common vulnerabilities and secure coding practices.",
       attendees: 30,
       color: "#06b6d4"
