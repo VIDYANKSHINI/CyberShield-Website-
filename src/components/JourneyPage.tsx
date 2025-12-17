@@ -36,7 +36,7 @@ export function JourneyPage() {
   const achievements = [
     {
       icon: Trophy,
-      title: "1st Place - National Cyber Defense Competition",
+      title: "ABC",
       date: "November 2024",
       description: "Our team secured first place among 50+ universities in the annual National Cyber Defense Competition, demonstrating exceptional skills in network defense and incident response.",
       color: "#00ff88",
