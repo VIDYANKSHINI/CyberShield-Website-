@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Users, Clock, ExternalLink } from "lucide-react";
+import { Calendar, MapPin, Users, Clock, ExternalLink, TrendingUp, Award, BookOpen, HelpCircle, Presentation } from "lucide-react";
 import { motion } from "motion/react";
 
 export function EventsPage() {
@@ -7,8 +7,8 @@ export function EventsPage() {
       title: "Team Meeting & Planning Session",
       date: "January 12, 2025",
       time: "5:00 PM - 6:30 PM",
-      mode: "Hybrid",
-      location: "CS Building Room 301 / Discord",
+      mode: "Offline",
+      location: "TBD",
       description: "Monthly team meeting to discuss upcoming activities, plan events, and coordinate our initiatives for the semester.",
       attendees: 25,
       color: "#00ff88"
@@ -18,17 +18,17 @@ export function EventsPage() {
       date: "January 20, 2025",
       time: "6:00 PM - 8:00 PM",
       mode: "Offline",
-      location: "CS Lab 2",
+      location: "AIDS Lab 2",
       description: "Hands-on introduction to web security basics, covering common vulnerabilities and secure coding practices.",
       attendees: 30,
       color: "#06b6d4"
     },
     {
-      title: "Introduction to CTF Challenges",
+      title: "Introduction to Web security",
       date: "February 3, 2025",
       time: "4:00 PM - 6:00 PM",
       mode: "Hybrid",
-      location: "CS Building Room 301 / Online",
+      location: "AIDS dept ",
       description: "Beginner-friendly session on capture-the-flag competitions and how to get started with cybersecurity challenges.",
       attendees: 35,
       color: "#0ea5e9"
@@ -41,7 +41,7 @@ export function EventsPage() {
       date: "September 5, 2024",
       mode: "Offline",
       description: "Welcome event for new members featuring club overview, team introductions, and networking activities.",
-      attendees: 45
+      attendees: 25
     },
     {
       title: "Introduction to Cybersecurity Workshop",
@@ -51,11 +51,11 @@ export function EventsPage() {
       attendees: 35
     },
     {
-      title: "First Team CTF Practice",
+      title: "Introductionn to web development",
       date: "November 10, 2024",
       mode: "Online",
-      description: "Our first practice CTF event where members learned and solved beginner-level challenges together.",
-      attendees: 28
+      description: "Our web development session where web develpment entire taught.",
+      attendees: 50
     }
   ];
 
@@ -80,6 +80,194 @@ export function EventsPage() {
             Join us for hands-on workshops, competitions, and networking opportunities to level up your cybersecurity skills.
           </p>
         </motion.div>
+
+        {/* Statistics Section */}
+        <section className="mb-20">
+          {/* Overall Summary */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"
+          >
+            <div className="relative p-6 rounded-xl bg-gradient-to-br from-[#00ff88]/10 to-[#00ff88]/5 border border-[#00ff88]/30 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#00ff88]/10 rounded-full blur-[60px]" />
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-[#00ff88]/20 border border-[#00ff88]/30">
+                    <TrendingUp className="h-6 w-6 text-[#00ff88]" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Activities Summary</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400">Planned</span>
+                    <span className="text-2xl font-bold text-[#00ff88]">14</span>
+                  </div>
+                  <div className="h-px bg-gradient-to-r from-[#00ff88]/0 via-[#00ff88]/30 to-[#00ff88]/0" />
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400">Conducted</span>
+                    <span className="text-2xl font-bold text-white">14</span>
+                  </div>
+                  <div className="mt-4 p-3 rounded-lg bg-[#00ff88]/5 border border-[#00ff88]/20">
+                    <div className="flex items-center gap-2">
+                      <Award className="h-4 w-4 text-[#00ff88]" />
+                      <span className="text-sm text-[#00ff88] font-medium">100% Completion Rate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative p-6 rounded-xl bg-gradient-to-br from-[#06b6d4]/10 to-[#06b6d4]/5 border border-[#06b6d4]/30 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#06b6d4]/10 rounded-full blur-[60px]" />
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-[#06b6d4]/20 border border-[#06b6d4]/30">
+                    <Users className="h-6 w-6 text-[#06b6d4]" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Meetings Summary</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400">Planned</span>
+                    <span className="text-2xl font-bold text-[#06b6d4]">6</span>
+                  </div>
+                  <div className="h-px bg-gradient-to-r from-[#06b6d4]/0 via-[#06b6d4]/30 to-[#06b6d4]/0" />
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400">Conducted</span>
+                    <span className="text-2xl font-bold text-white">6</span>
+                  </div>
+                  <div className="mt-4 p-3 rounded-lg bg-[#06b6d4]/5 border border-[#06b6d4]/20">
+                    <div className="flex items-center gap-2">
+                      <Award className="h-4 w-4 text-[#06b6d4]" />
+                      <span className="text-sm text-[#06b6d4] font-medium">100% Completion Rate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Achievements Breakdown */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-6"
+          >
+            <h3 className="text-2xl font-semibold mb-2 text-white">Plan of Action & Achievements</h3>
+            <p className="text-gray-400 mb-6">Detailed breakdown of our successful initiatives</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="group relative p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-[#00ff88]/50 transition-all"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+              <div className="relative">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 rounded-lg bg-white/5 border border-white/10 group-hover:border-[#00ff88]/30 transition-colors">
+                    <Presentation className="h-6 w-6 text-[#00ff88]" />
+                  </div>
+                  <span className="text-3xl font-bold text-white">4</span>
+                </div>
+                <h4 className="font-semibold text-white mb-2">Awareness Sessions</h4>
+                <p className="text-sm text-gray-400">Successfully conducted sessions to promote cybersecurity awareness</p>
+                <div className="mt-4 flex items-center gap-2">
+                  <div className="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-[#00ff88] to-[#06b6d4] w-full rounded-full" />
+                  </div>
+                  <span className="text-xs text-[#00ff88] font-medium">100%</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="group relative p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-[#06b6d4]/50 transition-all"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#06b6d4]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+              <div className="relative">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 rounded-lg bg-white/5 border border-white/10 group-hover:border-[#06b6d4]/30 transition-colors">
+                    <BookOpen className="h-6 w-6 text-[#06b6d4]" />
+                  </div>
+                  <span className="text-3xl font-bold text-white">4</span>
+                </div>
+                <h4 className="font-semibold text-white mb-2">Courses</h4>
+                <p className="text-sm text-gray-400">Successfully conducted comprehensive cybersecurity courses</p>
+                <div className="mt-4 flex items-center gap-2">
+                  <div className="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-[#06b6d4] to-[#0ea5e9] w-full rounded-full" />
+                  </div>
+                  <span className="text-xs text-[#06b6d4] font-medium">100%</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="group relative p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-[#0ea5e9]/50 transition-all"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0ea5e9]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+              <div className="relative">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 rounded-lg bg-white/5 border border-white/10 group-hover:border-[#0ea5e9]/30 transition-colors">
+                    <HelpCircle className="h-6 w-6 text-[#0ea5e9]" />
+                  </div>
+                  <span className="text-3xl font-bold text-white">4</span>
+                </div>
+                <h4 className="font-semibold text-white mb-2">Quizzes</h4>
+                <p className="text-sm text-gray-400">Successfully conducted engaging knowledge assessment quizzes</p>
+                <div className="mt-4 flex items-center gap-2">
+                  <div className="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-[#0ea5e9] to-[#3b82f6] w-full rounded-full" />
+                  </div>
+                  <span className="text-xs text-[#0ea5e9] font-medium">100%</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="group relative p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-[#a855f7]/50 transition-all"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#a855f7]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+              <div className="relative">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 rounded-lg bg-white/5 border border-white/10 group-hover:border-[#a855f7]/30 transition-colors">
+                    <Award className="h-6 w-6 text-[#a855f7]" />
+                  </div>
+                  <span className="text-3xl font-bold text-white">2</span>
+                </div>
+                <h4 className="font-semibold text-white mb-2">Workshops</h4>
+                <p className="text-sm text-gray-400">Successfully conducted hands-on technical workshops</p>
+                <div className="mt-4 flex items-center gap-2">
+                  <div className="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-[#a855f7] to-[#c084fc] w-full rounded-full" />
+                  </div>
+                  <span className="text-xs text-[#a855f7] font-medium">100%</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Upcoming Events */}
         <section className="mb-20">
