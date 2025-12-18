@@ -1,4 +1,4 @@
-import { Mail, Github, Twitter, Linkedin, Shield } from "lucide-react";
+import { Mail, Github, Twitter, Linkedin, MessageCircle } from "lucide-react";
 import logoImage from "figma:asset/1f11105cbf3a95b3c21291bc2315f7189be7c6bd.png";
 
 export function Footer() {
@@ -6,6 +6,8 @@ export function Footer() {
     { icon: Github, href: "#", label: "GitHub" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Linkedin, href: "https://www.linkedin.com/company/cybershieldioit/posts/?feedView=all", label: "LinkedIn" },
+    { icon: MessageCircle, href: "#", label: "Whatsapp" },
+    
   ];
 
   return (
