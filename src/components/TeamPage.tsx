@@ -238,7 +238,7 @@ export function TeamPage() {
             <span className="text-sm text-[#00ff88]">Meet Our Team</span>
           </div>
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            The Team Behind CYBERSHIELD AISSMS IOIT
+            The Team Behind CYBERSHIELD 
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Passionate students dedicated to building a strong cybersecurity community and pushing the boundaries of what's possible.
