@@ -94,22 +94,7 @@ export function GalleryPage() {
       image: "https://images.unsplash.com/photo-1560439514-4e9645039924?w=800&h=600&fit=crop",
       description: "Building innovative security solutions"
     },
-    {
-      id: 11,
-      category: "events",
-      title: "Guest Speaker Series",
-      date: "September 2024",
-      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=600&fit=crop",
-      description: "Industry professionals sharing insights"
-    },
-    {
-      id: 12,
-      category: "workshops",
-      title: "Penetration Testing Boot Camp",
-      date: "September 2024",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
-      description: "Intensive 3-day training program"
-    }
+
   ];
 
   const filteredItems = selectedCategory === "all" 
