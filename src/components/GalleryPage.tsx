@@ -78,14 +78,7 @@ export function GalleryPage() {
       image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop",
       description: "Strengthening team bonds"
     },
-    {
-      id: 9,
-      category: "workshops",
-      title: "Cryptography Fundamentals",
-      date: "October 2024",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop",
-      description: "Introduction to encryption and hashing"
-    },
+
    
 
   ];
