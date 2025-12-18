@@ -86,14 +86,7 @@ export function GalleryPage() {
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop",
       description: "Introduction to encryption and hashing"
     },
-    {
-      id: 10,
-      category: "competitions",
-      title: "Regional Hackathon Victory",
-      date: "May 2024",
-      image: "https://images.unsplash.com/photo-1560439514-4e9645039924?w=800&h=600&fit=crop",
-      description: "Building innovative security solutions"
-    },
+   
 
   ];
 
