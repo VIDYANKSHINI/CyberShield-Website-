@@ -90,14 +90,7 @@ export function JourneyPage() {
       color: "#06b6d4",
       category: "Competition"
     },
-    {
-      icon: Shield,
-      title: "Campus-Wide Security Awareness Campaign",
-      date: "April 2024",
-      description: "Successfully organized a month-long security awareness campaign reaching 1000+ students with workshops and interactive sessions.",
-      color: "#0ea5e9",
-      category: "Outreach"
-    }
+  
   ];
 
   const milestones = [
