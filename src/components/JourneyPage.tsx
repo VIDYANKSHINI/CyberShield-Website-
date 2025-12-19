@@ -74,22 +74,8 @@ export function JourneyPage() {
       color: "#ec4899",
       category: "Partnership"
     },
-    {
-      icon: Target,
-      title: "100 Members Milestone",
-      date: "June 2024",
-      description: "Reached 100 active members, marking a significant growth milestone and expanding our impact on campus.",
-      color: "#00ff88",
-      category: "Milestone"
-    },
-    {
-      icon: Trophy,
-      title: "Regional Hackathon Victory",
-      date: "May 2024",
-      description: "Won first place at the Regional Security Hackathon with an innovative intrusion detection system using machine learning.",
-      color: "#06b6d4",
-      category: "Competition"
-    },
+   
+    
   
   ];
 
